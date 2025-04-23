@@ -5,9 +5,12 @@ import os
 app = Flask(__name__)
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'data')
 template_path = os.path.join(TEMPLATE_DIR, "yourBoard_template.txt")
 
+OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
+output_path = os.path.join(OUTPUT_DIR, "yourBoard.txt")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -25,7 +28,7 @@ def index():
         generated_content = content.format(device_name=device_name, manufacturer=manufacturer, pid=pid)
 
         # Write to yourBoard.txt
-        with open("yourBoard.txt", "w") as file:
+        with open(output_path, "w") as file:
             file.write(generated_content)
 
         return render_template("index.html", pid=pid, generated_content=generated_content)
