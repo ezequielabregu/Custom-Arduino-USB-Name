@@ -27,8 +27,8 @@ The app also provides a preview of the generated code, so you can see exactly wh
 
 1. Close the Arduino IDE if it is open.
 2. Locate **and backup** the `boards.txt` file in your Arduino installation directory. This file is usually found in the following path:
-   - Windows: `C:\Users\<username>\Documents\ArduinoData\packages\arduino\hardware\avr\1.8.6`
-   - macOS: `/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/boards.txt`
+   - Windows: `C:\Users\your_user_name\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\`
+   - macOS: `/Users/your_user_name/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/`
    - Linux: `/usr/share/arduino/hardware/arduino/avr/boards.txt`
 3. Open the `boards.txt` file in a text editor (Visual Studio Code or similar).
 4. At the end of the file, add the text copied to clipboard.
